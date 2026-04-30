@@ -1,0 +1,3 @@
+import { NextResponse } from 'next/server';
+import { executionFlow } from '@/lib/mockData';
+export async function POST(req: Request) { const b = await req.json(); const maxLoss = Math.abs((b.limitPrice ?? executionFlow.entryZone[0]) - executionFlow.stopLoss) * (b.size ?? 1) / Math.max(b.leverage ?? 1,1); return NextResponse.json({ ok:true, data:{ thesis: executionFlow, controls:{mode:'Approval',maxLeverage:20}, riskImpact:{maxLoss, marginImpact:(b.size??1)*(b.limitPrice??executionFlow.entryZone[0])/Math.max(b.leverage??1,1), riskChange: executionFlow.portfolioRiskChange}}, ts:new Date().toISOString()}); }

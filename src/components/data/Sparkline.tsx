@@ -1,0 +1,1 @@
+export default function Sparkline({ points }: { points: number[] }) { return <div className="grid h-12 grid-cols-12 items-end gap-[2px]">{points.slice(0,12).map((p,i)=><div key={i} className="bg-accent-cyan/70" style={{height:`${Math.max(10,p)}%`}} />)}</div>; }

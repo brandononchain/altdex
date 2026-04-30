@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+body { font-family: Inter, 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #050505; color: #E8ECEF; }
+.font-mono { font-family: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+@layer components {
+  .terminal-panel { @apply border border-border-subtle bg-panel-base rounded-none; }
+  .terminal-input { @apply w-full border border-border-subtle bg-panel-raised p-2 text-xs font-mono text-text-primary outline-none focus:ring-1 focus:ring-accent-cyan/60; }
+  .terminal-select { @apply terminal-input; }
+  .terminal-btn { @apply border border-border-subtle px-3 py-2 text-xs font-medium text-text-primary hover:border-accent-cyan/40; }
+  .terminal-btn-primary { @apply terminal-btn border-accent-cyan/40 bg-accent-cyan/10 text-accent-cyan; }
+  .terminal-btn-success { @apply terminal-btn border-accent-green/40 bg-accent-green/15 text-accent-green; }
+  .terminal-btn-danger { @apply terminal-btn border-accent-red/40 bg-accent-red/15 text-accent-red; }
+  .terminal-table { @apply w-full text-xs; }
+  .terminal-table th { @apply border-b border-border-subtle p-2 text-left text-[11px] uppercase tracking-wide text-text-muted; }
+  .terminal-table td { @apply border-b border-border-subtle p-2 align-middle font-mono; }
+}
+
+*:focus-visible { outline: 1px solid rgba(0,229,255,0.6); outline-offset: 1px; }
