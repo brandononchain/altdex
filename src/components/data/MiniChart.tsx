@@ -1,0 +1,1 @@
+export default function MiniChart({ bars=24 }: { bars?: number }) { return <div className={`grid h-24 grid-cols-${24} items-end gap-[2px] border border-border-subtle bg-panel-raised p-2`}>{Array.from({length:bars},(_,i)=><div key={i} className="bg-accent-cyan/70" style={{height:`${20 + (i%8)*8}%`}} />)}</div>; }

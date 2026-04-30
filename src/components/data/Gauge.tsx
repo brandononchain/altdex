@@ -1,0 +1,1 @@
+export default function Gauge({ value }: { value: number }) { return <div className="h-24 w-24 rounded-full border-[8px] border-accent-amber/40 border-t-accent-green border-b-accent-red text-center font-mono leading-[88px]">{value}</div>; }

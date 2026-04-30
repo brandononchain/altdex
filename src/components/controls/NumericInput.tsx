@@ -1,0 +1,1 @@
+export default function NumericInput({ label, value }: { label: string; value: string }) { return <label className="block text-xs text-text-muted">{label}<input className="terminal-input mt-1" value={value} readOnly /></label>; }
