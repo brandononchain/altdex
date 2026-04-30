@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALTDEX AI Execution Terminal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar panel">
+      <div class="logo">▲ ALTDEX</div>
+      <nav>
+        <div class="nav-item active">TERMINAL</div><div class="nav-item">PORTFOLIO</div><div class="nav-item">AGENTS</div>
+        <div class="nav-item">MARKETS</div><div class="nav-item">DATA LAB</div><div class="nav-item">STRATEGIES</div>
+        <div class="nav-item">RISK ENGINE</div><div class="nav-item">SETTINGS</div>
+      </nav>
+      <div class="watchlist panel">
+        <h4>WATCHLIST</h4>
+        <ul>
+          <li>BTC-PERP <span>+2.35%</span></li><li>ETH-PERP <span>+2.11%</span></li><li>SOL-PERP <span>+4.27%</span></li>
+          <li>ARB-PERP <span class="neg">-0.47%</span></li><li>LINK-PERP <span>+1.19%</span></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar panel">
+        <div><strong>TERMINAL</strong> · AI-NATIVE EXECUTION TERMINAL</div>
+        <div class="stats"><span>EQUITY $1,842,701</span><span class="pos">P&L +$47,842</span><span>RISK 23.7%</span></div>
+      </header>
+
+      <section class="content-grid">
+        <div class="chart panel">
+          <div class="instrument">
+            <h2>BTC-PERP <small>Bitcoin Perpetual</small></h2>
+            <div class="price">104,892.1 <span>+2.35%</span></div>
+          </div>
+          <div class="toolbar">1m 5m <strong>15m</strong> 1H 4H 1D · Indicators · Templates</div>
+          <div class="candles"></div>
+          <div class="indicators"></div>
+          <div class="positions panel">
+            <h3>Positions</h3>
+            <table>
+              <tr><th>Market</th><th>Side</th><th>Size</th><th>Entry</th><th>Mark</th><th>P&L</th></tr>
+              <tr><td>BTC-PERP</td><td class="pos">LONG</td><td>2.25 BTC</td><td>103,201.8</td><td>104,892.1</td><td class="pos">+3,803.21</td></tr>
+              <tr><td>ETH-PERP</td><td class="pos">LONG</td><td>15 ETH</td><td>3,201.7</td><td>3,642.2</td><td class="pos">+6,606.75</td></tr>
+              <tr><td>SOL-PERP</td><td class="neg">SHORT</td><td>250 SOL</td><td>174.2</td><td>170.3</td><td class="pos">+975.21</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="orderbook panel">
+          <h3>ORDER BOOK</h3>
+          <div class="book">
+            <div class="row sell"><span>104,895.6</span><span>3.25</span><span>18.65</span></div>
+            <div class="row sell"><span>104,894.7</span><span>1.32</span><span>13.26</span></div>
+            <div class="row sell"><span>104,893.4</span><span>3.12</span><span>10.09</span></div>
+            <div class="mid">104,892.1 ↑ +2.35%</div>
+            <div class="row buy"><span>104,892.0</span><span>2.81</span><span>2.81</span></div>
+            <div class="row buy"><span>104,891.5</span><span>3.73</span><span>6.54</span></div>
+            <div class="row buy"><span>104,891.0</span><span>4.22</span><span>10.76</span></div>
+          </div>
+        </div>
+
+        <aside class="rightcol">
+          <div class="panel exec">
+            <h3>EXECUTION PANEL</h3>
+            <label>Agent <input value="ALPHA-7"/></label>
+            <label>Position Size <input type="range" value="45"/></label>
+            <label>Leverage <input type="range" value="28"/></label>
+            <div class="actions"><button class="buy">BUY / LONG</button><button class="sell">SELL / SHORT</button></div>
+          </div>
+          <div class="panel risk">
+            <h3>RISK OVERVIEW</h3>
+            <p>Risk Level <span class="pos">Moderate</span></p>
+            <p>VaR (24H) <span>$68,421</span></p>
+            <p>Liquidation Price <span>93,214.7</span></p>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

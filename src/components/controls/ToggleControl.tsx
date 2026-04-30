@@ -1,0 +1,1 @@
+export default function ToggleControl({ label, on=false }: { label: string; on?: boolean }) { return <div className="flex items-center justify-between border border-border-subtle bg-panel-raised px-2 py-1 text-xs"><span>{label}</span><span className={`font-mono ${on?'text-accent-green':'text-text-muted'}`}>{on?'ON':'OFF'}</span></div>; }
