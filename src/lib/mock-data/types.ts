@@ -1,0 +1,9 @@
+export interface AccountSummary { equity:number; pnl24h:number; marginUsed:number; available:number; risk:number; latencyMs:number }
+export interface WatchlistItem { symbol:string; price:number; change24h:number }
+export interface MarketAsset { symbol:string; price:number; change24h:number; change7d:number; change30d:number; volume:number; marketCap:number; tvl:number; aiSignalScore:number; trendSparkline:number[] }
+export interface Position { market:string; side:'LONG'|'SHORT'; size:number; sizeUnit:string; entryPrice:number; markPrice:number; pnl:number; pnlPercent:number; liquidationPrice:number; margin:number; tp:number; sl:number; agent:string }
+export interface Agent { name:string; walletShort:string; strategy:string; chain:string; tvl:number; return30d:number; winRate:number; sharpe:number; drawdown:number; status:'Active'|'Paused'|'Offline'; performanceSparkline:number[] }
+export interface Strategy { name:string; type:string; markets:string[]; timeframe:string; pnl:number; returnPct:number; winRate:number; sharpe:number; drawdown:number; status:'Running'|'Backtest'|'Paused' }
+export interface RiskMetrics { var24h:number; expectedShortfall:number; maxDrawdown:number; effectiveLeverage:number; liquidationRisk:number; correlationMatrix:{labels:string[]; values:number[][]}; stressTests:{scenario:string; pnlImpact:number; riskAfter:number}[]; riskAlerts:{severity:'LOW'|'MEDIUM'|'HIGH'; message:string}[] }
+export interface DataLabMetrics { onChainTps:number; activeAddresses:number; derivativesOi:number; fundingRate:number; liquidityScore:number; volatilityIndex:number; dataFeeds:{name:string; status:'Live'|'Lagging'}[]; recentQueries:{query:string; time:string}[] }
+export interface ExecutionFlow { selectedAgent:string; selectedStrategy:string; direction:'LONG'|'SHORT'; confidence:number; entryZone:[number,number]; stopLoss:number; takeProfit:number; expectedR:number; slippageEstimate:number; fees:number; portfolioRiskChange:number }
